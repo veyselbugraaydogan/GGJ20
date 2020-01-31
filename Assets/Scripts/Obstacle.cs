@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     public Vector3 DEFAULT_VECTOR = Vector3.one * -100;
 
-    public float moveSpeed;
+    [SerializeField ,Range(0, 5)] float moveSpeed = 2f;
     public Transform target;
     public bool isPressed;
     Vector3 direction;
@@ -57,6 +57,17 @@ public class Obstacle : MonoBehaviour
         var distance = heading.magnitude;
         var direction = heading / distance;
         return direction;         
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.tag == "Player")
+        {
+            if(!isPressed && direction != DEFAULT_VECTOR){
+                print("helal bro");
+            }
+            else
+                print("öldün aq");
+        }
     }
 
 }

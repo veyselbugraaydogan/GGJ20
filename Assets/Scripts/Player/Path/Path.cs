@@ -44,7 +44,7 @@ public class Path : MonoBehaviour
 
     public Vector3 GetActiveWaypoint()
     {
-        Debug.Log("Active waypoint is " + path[activeWayPoint].position);
+        //Debug.Log("Active waypoint is " + path[activeWayPoint].position);
         return path[activeWayPoint].position;
     }
 
