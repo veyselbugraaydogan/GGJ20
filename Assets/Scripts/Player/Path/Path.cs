@@ -54,4 +54,9 @@ public class Path : MonoBehaviour
             return;
         activeWayPoint = (activeWayPoint + 1);
     }
+
+    public bool IsAtLastWaypoint()
+    {
+        return activeWayPoint == transform.childCount - 1;
+    }
 }

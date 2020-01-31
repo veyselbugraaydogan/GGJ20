@@ -23,17 +23,46 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-       
+        RunToTarget();   
+    }
+
+
+    private void RunToTarget()
+    {
         Vector3 target = path.GetActiveWaypoint();
         float distance = Vector3.Distance(target, transform.position);
+
         if (waypointTolerance > distance)
             path.SetActiveWaypointNext();
+
         Vector3 targetEyeLevel = new Vector3(target.x, transform.position.y, target.z);
         playerNavMesh.SetDestination(target);
-        if(waypointTolerance < distance)
-            playerNavMesh.transform.LookAt(targetEyeLevel);
 
-        
+        if (waypointTolerance < distance)
+            playerNavMesh.transform.LookAt(targetEyeLevel);
+    }
+
+
+    public Path GetPath()
+    {
+        return path;
+    }
+
+
+
+    public bool IsAtFinish()
+    {   
+        //Controls if runner is at finish position
+
+        Vector3 target = path.GetActiveWaypoint();
+        float distance = Vector3.Distance(target, transform.position);
+
+        if (waypointTolerance > distance && path.IsAtLastWaypoint())
+        {
+            return true;
+        }
+            
+        return false;
     }
 
 
