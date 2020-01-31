@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b98bc55dfa78251469f257231ad3da6d
+guid: 1b9dd58931faaa3429728af421adbb65
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -163,6 +163,9 @@ ModelImporter:
       43: 4300010
     second: LegRight1
   - first:
+      74: 7400000
+    second: mixamo.com
+  - first:
       95: 9500000
     second: //RootNode
   - first:
@@ -210,7 +213,82 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ArmLeft1
+        weight: 1
+      - path: ArmRight1
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Head1
+        weight: 1
+      - path: LegLeft1
+        weight: 1
+      - path: LegRight1
+        weight: 1
+      - path: Rig1
+        weight: 1
+      - path: Rig1/LegL1
+        weight: 1
+      - path: Rig1/LegL1/LegL2
+        weight: 1
+      - path: Rig1/LegL1/LegL2/LegL3
+        weight: 1
+      - path: Rig1/LegR1
+        weight: 1
+      - path: Rig1/LegR1/LegR2
+        weight: 1
+      - path: Rig1/LegR1/LegR2/LegR3
+        weight: 1
+      - path: Rig1/Spine1
+        weight: 1
+      - path: Rig1/Spine1/Spine2
+        weight: 1
+      - path: Rig1/Spine1/Spine2/ArmL1
+        weight: 1
+      - path: Rig1/Spine1/Spine2/ArmL1/ArmL2
+        weight: 1
+      - path: Rig1/Spine1/Spine2/ArmL1/ArmL2/ArmL3
+        weight: 1
+      - path: Rig1/Spine1/Spine2/ArmR1
+        weight: 1
+      - path: Rig1/Spine1/Spine2/ArmR1/ArmR2
+        weight: 1
+      - path: Rig1/Spine1/Spine2/ArmR1/ArmR2/ArmR3
+        weight: 1
+      - path: Rig1/Spine1/Spine2/Neck1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -249,126 +327,11 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: basicCharacter(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmLeft1
-      parentName: basicCharacter(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmRight1
-      parentName: basicCharacter(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Body1
-      parentName: basicCharacter(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Head1
-      parentName: basicCharacter(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegLeft1
-      parentName: basicCharacter(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegRight1
-      parentName: basicCharacter(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Rig1
-      parentName: basicCharacter(Clone)
-      position: {x: -0, y: 0.06, z: 0}
-      rotation: {x: -0.0007638312, y: 0.0007638312, z: -0.70710635, w: 0.70710635}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegL1
-      parentName: Rig1
-      position: {x: -1.7763568e-17, y: -0.009793012, z: -0.000021157259}
-      rotation: {x: 2.9364054e-19, y: -0.0010802204, z: 0.9999994, w: 2.8327744e-16}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegL2
-      parentName: LegL1
-      position: {x: -0.03, y: -6.661338e-18, z: 0}
-      rotation: {x: 0, y: -0, z: -0.009089782, w: 0.9999587}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegL3
-      parentName: LegL2
-      position: {x: -0.030004501, y: -0.000025125786, z: 0}
-      rotation: {x: 0, y: -0, z: -0.7006501, w: 0.713505}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegR1
-      parentName: Rig1
-      position: {x: -1.7763568e-17, y: 0.0099999765, z: 0.000021604394}
-      rotation: {x: -0.0064098574, y: 0.9999789, z: 0.0010801982, w: 0.0000069240627}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegR2
-      parentName: LegR1
-      position: {x: -0.029997533, y: -0.00038458375, z: -3.6736386e-18}
-      rotation: {x: 0, y: 0, z: 0.0064098616, w: 0.9999795}
-      scale: {x: 1, y: 1, z: 1}
-    - name: LegR3
-      parentName: LegR2
-      position: {x: -0.03, y: -8.7707615e-17, z: -3.6736386e-18}
-      rotation: {x: 0.7071068, y: 0.7071068, z: -4.3297806e-17, w: -4.3297806e-17}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Spine1
-      parentName: Rig1
-      position: {x: -0.01, y: 4.4408974e-18, z: -4.797139e-21}
-      rotation: {x: 0, y: 0, z: 0.009089782, w: 0.9999587}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Spine2
-      parentName: Spine1
-      position: {x: -0.03999339, y: 0.0007271525, z: 1.4100497e-20}
-      rotation: {x: 0, y: 0, z: 0.7006501, w: 0.713505}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmL1
-      parentName: Spine2
-      position: {x: -0.019999953, y: 3.5527136e-17, z: -0.000043208787}
-      rotation: {x: 0.7027283, y: 0.7114575, z: 0.0007591019, w: 0.00076853135}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmL2
-      parentName: ArmL1
-      position: {x: -0.019875027, y: -0.0102461325, z: -2.433989e-18}
-      rotation: {x: 0, y: 0, z: 0.0018622868, w: 0.9999983}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmL3
-      parentName: ArmL2
-      position: {x: -0.029998884, y: -0.00025861108, z: -3.6736605e-18}
-      rotation: {x: 0.70405245, y: 0.710148, z: 8.65948e-17, w: -3.732465e-19}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmR1
-      parentName: Spine2
-      position: {x: 0.019999953, y: 3.5527136e-17, z: 0.000043208787}
-      rotation: {x: 0.6985376, y: 0.7155726, z: 0.00075457495, w: 0.00077297655}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmR2
-      parentName: ArmR1
-      position: {x: -0.02023509, y: 0.00951531, z: -2.4780838e-18}
-      rotation: {x: 0, y: 0, z: 0.012045571, w: 0.99992746}
-      scale: {x: 1, y: 1, z: 1}
-    - name: ArmR3
-      parentName: ArmR2
-      position: {x: -0.03, y: -1.2434498e-16, z: -3.6728742e-18}
-      rotation: {x: 0.7071068, y: 0.7071068, z: 8.659561e-17, w: -5.229459e-32}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Neck1
-      parentName: Spine2
-      position: {x: -2.806792e-17, y: 0.01, z: 5.517208e-21}
-      rotation: {x: 3.2011086e-19, y: -0.0010802204, z: 1.8388024e-16, w: 0.9999994}
-      scale: {x: 1, y: 1, z: 1}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -379,9 +342,10 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b98bc55dfa78251469f257231ad3da6d,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
