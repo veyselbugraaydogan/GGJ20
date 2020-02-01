@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Obstacle : MonoBehaviour
 {
@@ -9,27 +8,17 @@ public class Obstacle : MonoBehaviour
     public GameObject road;
     public bool isPressed = false;
     public bool isFinished = false;
-	public Animator anim;
-	public GameObject character;
-	public NavMeshAgent agent;
-	
-    [SerializeField, Range(0, 5)] float buildTimeLeft = 2f;
-    float oldBuildTimeLeft;
 
-    [SerializeField, Range(0, 5)] float tickTimeLeft = 2f;
-    float oldTickTimeLeft;
+    [SerializeField, Range(0, 5)] float timeLeft = 2f;
 
     [SerializeField, Range(0, 2)] int tickNumber = 1;
-    public int currentTickNumber = 0; 
+    private int currentTickNumber = 0; 
 
     public MeshRenderer roadSprite;
     public Material[] materials;
 
     private void Start() {
-        RepairRoad();
         roadSprite.material = materials[currentTickNumber];
-        oldBuildTimeLeft = buildTimeLeft;
-        oldTickTimeLeft = tickTimeLeft;
     }
 
     private void Update()
@@ -43,7 +32,7 @@ public class Obstacle : MonoBehaviour
                 if (hit.transform == brokenRoad.transform)
                 {
                     if(currentTickNumber < tickNumber)
-                        UpdateRepairSprite(true);
+                        UpdateRepairSprite();
                     else
                     {
                         isPressed = true;
@@ -55,63 +44,28 @@ public class Obstacle : MonoBehaviour
         }
 
         if(isPressed)
-        {
-            ReduceBuildTimer();
-        }
-        ReduceTickTimer();
+            ReduceTimer();
     }
 
-    private void UpdateRepairSprite(bool isPressed)
+    private void UpdateRepairSprite()
     {
-        if(isPressed)
-            currentTickNumber++;
-        else
-        {
-            if(isFinished)
-                BrokeRoad();
-            currentTickNumber = 0;
-        }
+        currentTickNumber++;
         roadSprite.material = materials[currentTickNumber];
-        ReverseTickTimer();
     }
 
-    private void ReduceTickTimer(){
-        tickTimeLeft -= Time.deltaTime;
-        if(tickTimeLeft <= 0)
-        {
-            UpdateRepairSprite(false);
-            ReverseTickTimer();
-        }
-    }
-
-    private void ReverseTickTimer(){
-        tickTimeLeft = oldTickTimeLeft;
-    }
-
-    private void ReduceBuildTimer()
+    private void ReduceTimer()
     {
-        buildTimeLeft -= Time.deltaTime;
-        if (buildTimeLeft < 0)
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0)
         {
             isFinished = true;
         }
     }
 
-    private void ReverseBuildTimer()
-    {
-        buildTimeLeft = oldBuildTimeLeft;
-    }
-
-    public void RepairRoad()
+    private void RepairRoad()
     {
         brokenRoad.SetActive(false);
         road.SetActive(true);
-    }
-
-    public void BrokeRoad()
-    {
-        brokenRoad.SetActive(true);
-        road.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -119,14 +73,12 @@ public class Obstacle : MonoBehaviour
         if(isFinished && other.tag == "Player")
         {
             print("helal bro");
+            isPressed = false;
         }
         else if(!isFinished && other.tag == "Player")
         {
-			anim = character.GetComponent<Animator>();
-			agent = character.GetComponent<NavMeshAgent>();   
-			anim.Play("Falling");
             print("öldün gral");
-			agent.isStopped = true;
+            isPressed = false;
         }
     }
 }
