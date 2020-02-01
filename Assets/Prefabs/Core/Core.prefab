@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6349077950499132549}
   m_LocalRotation: {x: 0.3390574, y: -0, z: -0, w: 0.94076574}
-  m_LocalPosition: {x: 0, y: 45.3, z: -46.5}
+  m_LocalPosition: {x: -57820, y: -17657, z: -19411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6349077949744064444}
@@ -276,6 +276,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FollowCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664341125964440215, guid: 8356f709e1b1c104a906d2f281580434,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664341125964440215, guid: 8356f709e1b1c104a906d2f281580434,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664341125964440215, guid: 8356f709e1b1c104a906d2f281580434,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664341125964440215, guid: 8356f709e1b1c104a906d2f281580434,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.9538462
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8356f709e1b1c104a906d2f281580434, type: 3}
