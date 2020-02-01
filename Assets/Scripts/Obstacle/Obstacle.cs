@@ -10,7 +10,8 @@ public class Obstacle : MonoBehaviour
     public bool isPressed = false;
     public bool isFinished = false;
     public Animator anim;
-    public GameObject character, hammer;
+    public GameObject hammer;
+    public PlayerControl character;
     public NavMeshAgent agent;
 
     [SerializeField, Range(0, 5)] float buildTimeLeft = 2f;
@@ -32,6 +33,7 @@ public class Obstacle : MonoBehaviour
         oldBuildTimeLeft = buildTimeLeft;
         oldTickTimeLeft = tickTimeLeft;
         hammer.SetActive(false);
+        character = FindObjectOfType<PlayerControl>();
     }
 
     private void Update()
