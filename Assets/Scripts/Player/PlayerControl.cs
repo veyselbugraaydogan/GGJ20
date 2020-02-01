@@ -65,5 +65,16 @@ public class PlayerControl : MonoBehaviour
         return false;
     }
 
+    public void NavMeshStop()
+    {
+        playerNavMesh.isStopped = true;
+    }
+
+    public void NavMeshStart()
+    {
+        playerNavMesh.isStopped = false;
+    }
+
+    
 
 }

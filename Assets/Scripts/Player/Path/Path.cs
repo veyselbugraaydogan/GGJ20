@@ -59,4 +59,9 @@ public class Path : MonoBehaviour
     {
         return activeWayPoint == transform.childCount - 1;
     }
+
+    public void Reset()
+    {
+        activeWayPoint = 0;
+    }
 }
