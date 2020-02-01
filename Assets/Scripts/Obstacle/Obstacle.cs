@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
     public bool isPressed = false;
     public bool isFinished = false;
     public Animator anim;
-    public GameObject hammer;
+    public GameObject hammer,cloud;
     public PlayerControl character;
     public NavMeshAgent agent;
 
@@ -33,6 +33,7 @@ public class Obstacle : MonoBehaviour
         oldBuildTimeLeft = buildTimeLeft;
         oldTickTimeLeft = tickTimeLeft;
         hammer.SetActive(false);
+		cloud.SetActive(false);
         character = FindObjectOfType<PlayerControl>();
     }
 
@@ -61,6 +62,7 @@ public class Obstacle : MonoBehaviour
         if (isPressed)
         {
             hammer.SetActive(true);
+			cloud.SetActive(true);
             ReduceBuildTimer();
         }
         //ReduceTickTimer();
@@ -102,6 +104,7 @@ public class Obstacle : MonoBehaviour
         {
             isFinished = true;
             hammer.SetActive(false);
+			cloud.SetActive(false);
         }
     }
 
