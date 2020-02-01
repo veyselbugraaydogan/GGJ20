@@ -54,6 +54,7 @@ MonoBehaviour:
   buildTimeLeft: 2
   tickTimeLeft: 0.83
   tickNumber: 2
+  currentTickNumber: 0
   roadSprite: {fileID: 3508548513239643584}
   materials:
   - {fileID: 2100000, guid: 626943106bcc0154f8934b18ede2cad9, type: 2}
@@ -456,6 +457,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1661832106906406763, guid: b452ec3763896494c838685811958360,
+        type: 3}
+      propertyPath: obstacle
+      value: 
+      objectReference: {fileID: 4693503914997638931}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b452ec3763896494c838685811958360, type: 3}
 --- !u!224 &1939066884 stripped

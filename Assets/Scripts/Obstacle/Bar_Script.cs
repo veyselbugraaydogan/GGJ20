@@ -6,21 +6,23 @@ public class Bar_Script : MonoBehaviour
 {
     public Image Bar;
     public float Fill;
-	public bool boolean=true;
+    public Obstacle obstacle;
 
     void Start()
     {
-		Bar.fillAmount=0;
+        Bar.gameObject.SetActive(false);
+        Bar.enabled = false;
+        Bar.fillAmount = obstacle.currentTickNumber;
     }
-	
+
     void Update()
     {
-		if(Input.GetMouseButtonDown(0))
-		{
-        Bar.fillAmount+=Fill;
-		}
-		
-	
+        if(obstacle.isFinished);
+            //canvas.SetActive(false);
+        else
+        {
+            Bar.fillAmount = obstacle.currentTickNumber;
+        }
     }
 	
 	

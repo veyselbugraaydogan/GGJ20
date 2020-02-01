@@ -16,7 +16,7 @@ public class Obstacle : MonoBehaviour
     float oldTickTimeLeft;
 
     [SerializeField, Range(0, 2)] int tickNumber = 1;
-    private int currentTickNumber = 0; 
+    public int currentTickNumber = 0; 
 
     public MeshRenderer roadSprite;
     public Material[] materials;
