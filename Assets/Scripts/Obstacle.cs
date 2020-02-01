@@ -6,10 +6,20 @@ public class Obstacle : MonoBehaviour
 {
     public GameObject brokenRoad;
     public GameObject road;
-    public BoxCollider boxCollider;
     public bool isPressed = false;
     public bool isFinished = false;
-    [Range(0, 5)]public float timeLeft = 2f;
+
+    [SerializeField, Range(0, 5)] float timeLeft = 2f;
+
+    [SerializeField, Range(0, 2)] int tickNumber = 1;
+    private int currentTickNumber = 0; 
+
+    public MeshRenderer roadSprite;
+    public Material[] materials;
+
+    private void Start() {
+        roadSprite.material = materials[currentTickNumber];
+    }
 
     private void Update()
     {
@@ -21,14 +31,26 @@ public class Obstacle : MonoBehaviour
             {
                 if (hit.transform == brokenRoad.transform)
                 {
-                    isPressed = true;
-                    RepairRoad();
+                    if(currentTickNumber < tickNumber)
+                        UpdateRepairSprite();
+                    else
+                    {
+                        isPressed = true;
+                        RepairRoad();
+                    }
+                    
                 }
             }
         }
 
         if(isPressed)
             ReduceTimer();
+    }
+
+    private void UpdateRepairSprite()
+    {
+        currentTickNumber++;
+        roadSprite.material = materials[currentTickNumber];
     }
 
     private void ReduceTimer()
@@ -44,7 +66,6 @@ public class Obstacle : MonoBehaviour
     {
         brokenRoad.SetActive(false);
         road.SetActive(true);
-        //boxCollider.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other) 
