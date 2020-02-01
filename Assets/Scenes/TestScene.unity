@@ -396,11 +396,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle Straight Road
       objectReference: {fileID: 0}
-    - target: {fileID: 4693503914997638931, guid: 69825b13c445eac45838f319896099ed,
-        type: 3}
-      propertyPath: timeLeft
-      value: 0.57
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69825b13c445eac45838f319896099ed, type: 3}
 --- !u!1 &170076733
@@ -476,7 +471,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 234278910, y: 1.5973895e+13, z: 6.8291517e+22, w: 1.06452975e+24}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
