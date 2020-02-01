@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
     public bool isPressed = false;
     public bool isFinished = false;
 	public Animator anim;
-	public GameObject character;
+	public PlayerControl character;
 	public NavMeshAgent agent;
 	
     [SerializeField, Range(0, 5)] float buildTimeLeft = 2f;
@@ -30,6 +30,7 @@ public class Obstacle : MonoBehaviour
         roadSprite.material = materials[currentTickNumber];
         oldBuildTimeLeft = buildTimeLeft;
         oldTickTimeLeft = tickTimeLeft;
+        character = FindObjectOfType<PlayerControl>();
     }
 
     private void Update()
@@ -122,8 +123,8 @@ public class Obstacle : MonoBehaviour
         }
         else if(!isFinished && other.tag == "Player")
         {
-			anim = character.GetComponent<Animator>();
-			agent = character.GetComponent<NavMeshAgent>();   
+			anim = character.gameObject.GetComponent<Animator>();
+			agent = character.gameObject.GetComponent<NavMeshAgent>();   
 			anim.Play("Falling");
             print("öldün gral");
 			agent.isStopped = true;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4693503914997638931}
   - component: {fileID: 3580062185557339490}
   m_Layer: 0
-  m_Name: Obstacle Straight Road
+  m_Name: Obstacle Bridge Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,15 +53,15 @@ MonoBehaviour:
   anim: {fileID: 0}
   character: {fileID: 0}
   agent: {fileID: 0}
-  buildTimeLeft: 1.09
-  tickTimeLeft: 3.46
-  tickNumber: 1
+  buildTimeLeft: 1.04
+  tickTimeLeft: 5
+  tickNumber: 2
   currentTickNumber: 0
   roadSprite: {fileID: 3508548513239643584}
   materials:
-  - {fileID: 2100000, guid: 626943106bcc0154f8934b18ede2cad9, type: 2}
-  - {fileID: 2100000, guid: aba903c893b9dea44adbd2d833d39481, type: 2}
   - {fileID: 2100000, guid: 90bd33404ad77b7478d1606d6afedc96, type: 2}
+  - {fileID: 2100000, guid: aba903c893b9dea44adbd2d833d39481, type: 2}
+  - {fileID: 2100000, guid: 626943106bcc0154f8934b18ede2cad9, type: 2}
 --- !u!65 &3580062185557339490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.07422638, y: 0.2538967, z: 4.002161}
-  m_Center: {x: -0.07, y: 0.8181238, z: -1.501081}
+  m_Center: {x: 0.05, y: 0.8181238, z: -1.501081}
 --- !u!1 &1696738018761530198
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696738018761530198}
-  m_Mesh: {fileID: 4300000, guid: 42cde6954761ad241ba1272766a69f4e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c42486e65930a4b418e189cbe2c84a3d, type: 3}
 --- !u!23 &1696738018759329174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 42cde6954761ad241ba1272766a69f4e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c42486e65930a4b418e189cbe2c84a3d, type: 3}
 --- !u!1 &3310653394166950650
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,13 +196,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3310653394166950650}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0.635, z: -1.5}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.5, y: 0.993, z: -1.5}
+  m_LocalScale: {x: 0.14810328, y: 0.3, z: 0.22522606}
   m_Children: []
   m_Father: {fileID: 1696738018761230198}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &5499034048429824478
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4693503915420495608}
-  m_Mesh: {fileID: 4300000, guid: 42cde6954761ad241ba1272766a69f4e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c42486e65930a4b418e189cbe2c84a3d, type: 3}
 --- !u!23 &4693503915420495605
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 42cde6954761ad241ba1272766a69f4e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c42486e65930a4b418e189cbe2c84a3d, type: 3}
 --- !u!1001 &1661832108306145134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413,12 +413,12 @@ PrefabInstance:
     - target: {fileID: 1661832106906406762, guid: b452ec3763896494c838685811958360,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 1661832106906406762, guid: b452ec3763896494c838685811958360,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.231
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 1661832106906406762, guid: b452ec3763896494c838685811958360,
         type: 3}
