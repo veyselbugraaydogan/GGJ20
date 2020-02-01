@@ -51,7 +51,6 @@ public class Obstacle : MonoBehaviour
                     else
                     {
                         isPressed = true;
-
                         RepairRoad();
                     }
 
@@ -64,7 +63,7 @@ public class Obstacle : MonoBehaviour
             hammer.SetActive(true);
             ReduceBuildTimer();
         }
-        ReduceTickTimer();
+        //ReduceTickTimer();
     }
 
     private void UpdateRepairSprite(bool isPressed)
@@ -73,8 +72,8 @@ public class Obstacle : MonoBehaviour
             currentTickNumber++;
         else
         {
-            if (isFinished)
-                BrokeRoad();
+            // if (isFinished)
+            //     BrokeRoad();
             currentTickNumber = 0;
         }
         roadSprite.material = materials[currentTickNumber];

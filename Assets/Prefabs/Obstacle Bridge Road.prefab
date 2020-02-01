@@ -52,8 +52,8 @@ MonoBehaviour:
   isPressed: 0
   isFinished: 0
   anim: {fileID: 0}
-  character: {fileID: 0}
   hammer: {fileID: 8373427167789898511}
+  character: {fileID: 0}
   agent: {fileID: 0}
   buildTimeLeft: 1.04
   tickTimeLeft: 5
