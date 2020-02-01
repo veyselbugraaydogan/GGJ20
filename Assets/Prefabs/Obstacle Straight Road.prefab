@@ -50,8 +50,14 @@ MonoBehaviour:
   road: {fileID: 4693503915420495608}
   isPressed: 0
   isFinished: 0
-  type: 0
-  timeLeft: 2
+  buildTimeLeft: 2
+  tickTimeLeft: 0.83
+  tickNumber: 2
+  roadSprite: {fileID: 3508548513239643584}
+  materials:
+  - {fileID: 2100000, guid: 626943106bcc0154f8934b18ede2cad9, type: 2}
+  - {fileID: 2100000, guid: aba903c893b9dea44adbd2d833d39481, type: 2}
+  - {fileID: 2100000, guid: 90bd33404ad77b7478d1606d6afedc96, type: 2}
 --- !u!65 &3580062185557339490
 BoxCollider:
   m_ObjectHideFlags: 0

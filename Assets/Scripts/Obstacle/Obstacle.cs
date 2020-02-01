@@ -9,7 +9,11 @@ public class Obstacle : MonoBehaviour
     public bool isPressed = false;
     public bool isFinished = false;
 
-    [SerializeField, Range(0, 5)] float timeLeft = 2f;
+    [SerializeField, Range(0, 5)] float buildTimeLeft = 2f;
+    float oldBuildTimeLeft;
+
+    [SerializeField, Range(0, 5)] float tickTimeLeft = 2f;
+    float oldTickTimeLeft;
 
     [SerializeField, Range(0, 2)] int tickNumber = 1;
     private int currentTickNumber = 0; 
@@ -18,7 +22,10 @@ public class Obstacle : MonoBehaviour
     public Material[] materials;
 
     private void Start() {
+        RepairRoad();
         roadSprite.material = materials[currentTickNumber];
+        oldBuildTimeLeft = buildTimeLeft;
+        oldTickTimeLeft = tickTimeLeft;
     }
 
     private void Update()
@@ -32,7 +39,7 @@ public class Obstacle : MonoBehaviour
                 if (hit.transform == brokenRoad.transform)
                 {
                     if(currentTickNumber < tickNumber)
-                        UpdateRepairSprite();
+                        UpdateRepairSprite(true);
                     else
                     {
                         isPressed = true;
@@ -44,28 +51,63 @@ public class Obstacle : MonoBehaviour
         }
 
         if(isPressed)
-            ReduceTimer();
+        {
+            ReduceBuildTimer();
+        }
+        ReduceTickTimer();
     }
 
-    private void UpdateRepairSprite()
+    private void UpdateRepairSprite(bool isPressed)
     {
-        currentTickNumber++;
+        if(isPressed)
+            currentTickNumber++;
+        else
+        {
+            if(isFinished)
+                BrokeRoad();
+            currentTickNumber = 0;
+        }
         roadSprite.material = materials[currentTickNumber];
+        ReverseTickTimer();
     }
 
-    private void ReduceTimer()
+    private void ReduceTickTimer(){
+        tickTimeLeft -= Time.deltaTime;
+        if(tickTimeLeft <= 0)
+        {
+            UpdateRepairSprite(false);
+            ReverseTickTimer();
+        }
+    }
+
+    private void ReverseTickTimer(){
+        tickTimeLeft = oldTickTimeLeft;
+    }
+
+    private void ReduceBuildTimer()
     {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
+        buildTimeLeft -= Time.deltaTime;
+        if (buildTimeLeft < 0)
         {
             isFinished = true;
         }
     }
 
-    private void RepairRoad()
+    private void ReverseBuildTimer()
+    {
+        buildTimeLeft = oldBuildTimeLeft;
+    }
+
+    public void RepairRoad()
     {
         brokenRoad.SetActive(false);
         road.SetActive(true);
+    }
+
+    public void BrokeRoad()
+    {
+        brokenRoad.SetActive(true);
+        road.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -73,12 +115,10 @@ public class Obstacle : MonoBehaviour
         if(isFinished && other.tag == "Player")
         {
             print("helal bro");
-            isPressed = false;
         }
         else if(!isFinished && other.tag == "Player")
         {
             print("öldün gral");
-            isPressed = false;
         }
     }
 }
