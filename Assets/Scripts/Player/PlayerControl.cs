@@ -38,8 +38,8 @@ public class PlayerControl : MonoBehaviour
         Vector3 targetEyeLevel = new Vector3(target.x, transform.position.y, target.z);
         playerNavMesh.SetDestination(target);
 
-        if (waypointTolerance < distance)
-            playerNavMesh.transform.LookAt(targetEyeLevel);
+       /* if (waypointTolerance < distance)
+            playerNavMesh.transform.LookAt(targetEyeLevel);*/
     }
 
 
