@@ -6,10 +6,10 @@ public class Obstacle : MonoBehaviour
 {
     public GameObject brokenRoad;
     public GameObject road;
+    public BoxCollider boxCollider;
     public bool isPressed = false;
     public bool isFinished = false;
     [Range(0, 5)]public float timeLeft = 2f;
-    MeshRenderer meshRenderer;
 
     private void Update()
     {
@@ -44,6 +44,7 @@ public class Obstacle : MonoBehaviour
     {
         brokenRoad.SetActive(false);
         road.SetActive(true);
+        //boxCollider.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other) 

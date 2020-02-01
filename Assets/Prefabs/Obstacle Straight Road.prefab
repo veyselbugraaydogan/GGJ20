@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696738018761230196}
   - component: {fileID: 4693503914997638931}
+  - component: {fileID: 3580062185557339490}
   m_Layer: 0
   m_Name: Obstacle Straight Road
   m_TagString: Untagged
@@ -47,7 +48,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brokenRoad: {fileID: 1696738018761530198}
   road: {fileID: 4693503915420495608}
+  boxCollider: {fileID: 0}
   isPressed: 0
+  isFinished: 0
+  timeLeft: 2
+--- !u!65 &3580062185557339490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696738018761530196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07422638, y: 0.2538967, z: 4.002161}
+  m_Center: {x: -2.6383, y: 0.8181238, z: -1.501081}
 --- !u!1 &1696738018761530198
 GameObject:
   m_ObjectHideFlags: 0
