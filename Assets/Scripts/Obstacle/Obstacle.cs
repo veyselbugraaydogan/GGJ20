@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
     public bool isPressed = false;
     public bool isFinished = false;
 	public Animator anim;
-	public GameObject character;
+	public GameObject character,hammer;
 	public NavMeshAgent agent;
 	
     [SerializeField, Range(0, 5)] float buildTimeLeft = 2f;
@@ -30,6 +30,7 @@ public class Obstacle : MonoBehaviour
         roadSprite.material = materials[currentTickNumber];
         oldBuildTimeLeft = buildTimeLeft;
         oldTickTimeLeft = tickTimeLeft;
+		hammer.SetActive(false);
     }
 
     private void Update()
@@ -47,6 +48,7 @@ public class Obstacle : MonoBehaviour
                     else
                     {
                         isPressed = true;
+						
                         RepairRoad();
                     }
                     
@@ -56,6 +58,7 @@ public class Obstacle : MonoBehaviour
 
         if(isPressed)
         {
+			hammer.SetActive(true);
             ReduceBuildTimer();
         }
         ReduceTickTimer();
@@ -94,6 +97,7 @@ public class Obstacle : MonoBehaviour
         if (buildTimeLeft < 0)
         {
             isFinished = true;
+			hammer.SetActive(false);
         }
     }
 
@@ -118,6 +122,7 @@ public class Obstacle : MonoBehaviour
     {
         if(isFinished && other.tag == "Player")
         {
+			
             print("helal bro");
         }
         else if(!isFinished && other.tag == "Player")
