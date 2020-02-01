@@ -476,6 +476,16 @@ PrefabInstance:
       propertyPath: agent
       value: 
       objectReference: {fileID: 884303086}
+    - target: {fileID: 4693503914997638931, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: tickTimeLeft
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693503914997638931, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: buildTimeLeft
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69825b13c445eac45838f319896099ed, type: 3}
 --- !u!1 &170076733
@@ -2307,7 +2317,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659784257}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2957,6 +2967,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 942754281845160182, guid: 801b56d86716ad7428ef7bc01ed050cd,
+        type: 3}
+      propertyPath: distance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 9172236518771984521, guid: 801b56d86716ad7428ef7bc01ed050cd,
         type: 3}
       propertyPath: m_Name
@@ -2975,7 +2990,7 @@ PrefabInstance:
     - target: {fileID: 9172236518771984527, guid: 801b56d86716ad7428ef7bc01ed050cd,
         type: 3}
       propertyPath: m_Speed
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9172236518771984563, guid: 801b56d86716ad7428ef7bc01ed050cd,
         type: 3}
