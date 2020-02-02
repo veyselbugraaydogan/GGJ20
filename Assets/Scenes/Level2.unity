@@ -127,10 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1837236942}
     m_Modifications:
-    - target: {fileID: 1939066884, guid: 4640f99eb1b67ec4ebd501c53be8a493, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.63
-      objectReference: {fileID: 0}
     - target: {fileID: 1696738018761230196, guid: 4640f99eb1b67ec4ebd501c53be8a493,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -190,36 +186,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle Bridge Road
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580062185557339490, guid: 4640f99eb1b67ec4ebd501c53be8a493,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.2538967
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580062185557339490, guid: 4640f99eb1b67ec4ebd501c53be8a493,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.0907321
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580062185557339490, guid: 4640f99eb1b67ec4ebd501c53be8a493,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580062185557339490, guid: 4640f99eb1b67ec4ebd501c53be8a493,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580062185557339490, guid: 4640f99eb1b67ec4ebd501c53be8a493,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 3.2760534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580062185557339490, guid: 4640f99eb1b67ec4ebd501c53be8a493,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.97
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4640f99eb1b67ec4ebd501c53be8a493, type: 3}
@@ -963,10 +929,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle Straight Road (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2816417797971381394, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816417797971381394, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.46
+      objectReference: {fileID: 0}
     - target: {fileID: 3580062185557339490, guid: 69825b13c445eac45838f319896099ed,
         type: 3}
       propertyPath: m_Center.x
       value: -3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693503914997638931, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: buildTimeLeft
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693503914997638931, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: tickTimeLeft
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982016893044154763, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982016893044154763, guid: 69825b13c445eac45838f319896099ed,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69825b13c445eac45838f319896099ed, type: 3}
