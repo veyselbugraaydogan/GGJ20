@@ -145,6 +145,7 @@ public class Obstacle : MonoBehaviour
 
     private void RestartLevel()
     {
-        LevelManager.RestartLevel();
+        var levelManager = FindObjectOfType<LevelManager>(); 
+        levelManager.EnableFailCanvas();
     }
 }

@@ -1,18 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    private static LevelManager _instance;
+    public GameObject completedCanvas;
+    public GameObject failCanvas;
+    public bool isCompleted;
 
-    private void Awake() 
+    private void Update() {
+        if(isCompleted)
+        {
+            if(Input.anyKey)
+                InstantLoadScene();
+        }
+
+    }
+
+    public void EnableCompletedCanvas()
     {
-        if(_instance != null && _instance != this)
-            Destroy(this.gameObject);
-        else
-            _instance = this;
+        ActiveCompletedCanvas();
+        isCompleted = true;
+    }
+
+    private void ActiveCompletedCanvas()
+    {
+        completedCanvas.SetActive(true);
+    }
+
+    public void EnableFailCanvas()
+    {
+        ActiveFailCanvas();
+        Invoke("RestartLevel", 1.0f);
+    }
+
+    private void ActiveFailCanvas()
+    {
+        failCanvas.SetActive(true);
     }
 
     public void InstantLoadScene()
@@ -26,7 +52,7 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
-    public static void RestartLevel()
+    public void RestartLevel()
     {
         var scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex);
