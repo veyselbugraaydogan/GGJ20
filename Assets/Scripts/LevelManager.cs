@@ -44,7 +44,10 @@ public class LevelManager : MonoBehaviour
     public void InstantLoadScene()
     {
         var scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.buildIndex + 1);
+        if(scene.buildIndex == 3)
+            LoadStartScene();
+        else
+            SceneManager.LoadScene(scene.buildIndex + 1);
     }
 
     public void LoadStartScene()
