@@ -9,10 +9,10 @@ public class Obstacle : MonoBehaviour
     public GameObject road;
     public bool isPressed = false;
     public bool isFinished = false;
-    public Animator anim;
+    private Animator anim;
     public GameObject hammer,cloud;
-    public PlayerControl character;
-    public NavMeshAgent agent;
+    private PlayerControl character;
+    private NavMeshAgent agent;
 
     [SerializeField, Range(0, 5)] float buildTimeLeft = 2f;
     float oldBuildTimeLeft;
@@ -129,15 +129,15 @@ public class Obstacle : MonoBehaviour
     {
         if (isFinished && other.tag == "Player")
         {
-
-            print("helal bro");
         }
         else if (!isFinished && other.tag == "Player")
         {
             anim = character.GetComponent<Animator>();
             agent = character.GetComponent<NavMeshAgent>();
+            var audio = character.GetComponent<AudioSource>();
             anim.Play("Falling");
-            print("öldün gral");
+            audio.clip = character.falling;
+            audio.Play();
             agent.isStopped = true;
             Invoke("RestartLevel", 1.0f);
         }

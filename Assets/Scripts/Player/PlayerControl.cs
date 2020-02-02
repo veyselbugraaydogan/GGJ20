@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
 {
     NavMeshAgent playerNavMesh;
     GameObject player;
+    public AudioClip falling;
 
     [SerializeField]Transform target;
     [SerializeField]Path path;

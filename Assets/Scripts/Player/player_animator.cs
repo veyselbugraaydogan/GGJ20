@@ -6,6 +6,7 @@ public class player_animator : MonoBehaviour
 {
     Animator animator;
     PlayerControl controller;
+    AudioSource audio;
 
     void Start()
     {
@@ -17,7 +18,6 @@ public class player_animator : MonoBehaviour
     
     void Update()
     {
-
         if (controller.IsAtFinish())
         {
             Celebrate();
