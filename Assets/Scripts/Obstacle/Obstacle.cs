@@ -139,6 +139,12 @@ public class Obstacle : MonoBehaviour
             anim.Play("Falling");
             print("öldün gral");
             agent.isStopped = true;
+            Invoke("RestartLevel", 1.0f);
         }
+    }
+
+    private void RestartLevel()
+    {
+        LevelManager.RestartLevel();
     }
 }
