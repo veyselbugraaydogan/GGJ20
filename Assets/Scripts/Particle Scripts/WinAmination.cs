@@ -26,6 +26,5 @@ public class WinAmination : MonoBehaviour
             isCreated = true;
             Instantiate(particle, refpoint.position, Quaternion.identity);
         }
-
     }
 }
