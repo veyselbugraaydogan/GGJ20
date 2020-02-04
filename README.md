@@ -13,7 +13,7 @@ Fix Runner is a Hyper Casual Game where you have to repair roads before our cube
 
 ## Contributers
 
-* Atakan Talay - Artist - talayatakan@gmail.com
+* [Atakan Talay](https://globalgamejam.org/users/atakan) - Artist
 
 * [Mustafa Meşe](http://github.com/MustafaMese) - Developer
 
