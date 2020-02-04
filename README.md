@@ -9,7 +9,7 @@ Fix Runner is a Hyper Casual Game where you have to repair roads before our cube
 
 ![](/Images/fix-runner-2.png)
 
-![](/Images/fix-runner-2.png)
+![](/Images/fix-runner-3.png)
 
 ## Contributers
 
