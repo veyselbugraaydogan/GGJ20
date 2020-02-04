@@ -19,7 +19,7 @@ Fix Runner is a Hyper Casual Game where you have to repair roads before our cube
 
 * [Oğuzhan Akkaya](http://github.com/oguzhanakkaya) - Developer
 
-* [Ömer Bozbaba](http://github.com/bzbomer) - Developer 
+* [Ömer Bozaba](http://github.com/bzbomer) - Developer 
 
 * [Veysel Buğra Aydoğan](http://github.com/veyselbugraaydogan) - Developer 
 
